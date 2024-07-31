@@ -175,8 +175,8 @@ import './BirthdayCard.css';
 // export default BirthdayCard;
 
 import { useEffect } from 'react';
-import image from "../components/images/petal1.png"
-import image1 from "../components/images/petal2.png"
+import image from "../components/images/petals.jpeg"
+import image1 from "../components/images/petals.jpeg"
 
 
 const BirthdayCard = ({ name, imageUrl }) => {
