@@ -118,9 +118,9 @@ setButton(false)
 
   return (
     <div className="container">
-      <button className="btn" onClick={initAudio}>
+     <span style={{color:"red"}}>Click on the button for Music</span> <button style={{height:"40px"}} className="btn" onClick={initAudio}>
         Play Mp3 Audio
-      </button>
+      </button> 
 
       <audio className="audioBtn">
   <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />

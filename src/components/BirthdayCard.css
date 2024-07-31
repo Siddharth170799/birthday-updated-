@@ -1,18 +1,17 @@
 
-  
-  
+
    .card-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ed0fed;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 60%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
     margin: auto;
     flex-wrap: wrap;
-    
+    position: relative;
   }
   
   .attributes {
@@ -32,7 +31,7 @@
   .attribute {
     margin-bottom: 10px;
     font-size: 18px;
-    color: #333;
+    color: #555;
   }
   
   .letter {
@@ -45,11 +44,13 @@
   }
   
   .card-img {
-    width: 30%;
-    height: 40%;
-    border-radius: 25px;
-    box-shadow:  rgb(6, 8, 10) 0px 20px 30px -10px;
-    
+    width: 200px;
+    height: 280px;
+   
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    margin: 0 auto 20px;
   }
   
   .card-content {
@@ -59,135 +60,22 @@
   .card-title {
     font-size: 2em;
     margin: 20px 0 10px;
+    color: #333;
   }
   
   .card-text {
     font-size: 1.2em;
+    color: #666;
   }
-  
-
-
-
-
 
   .petal {
-    position: fixed;
-    top: -10%;
-    width: 50px;
-    height: 50px;
-    pointer-events: none;
-    z-index: 9999;
-    animation: fall linear infinite;
-  }
-  
-  @keyframes fall {
-    0% {
-      transform: translateY(0) rotateZ(0deg);
-    }
-    100% {
-      transform: translateY(100vh) rotateZ(360deg);
-    }
-  }
-  
-  .petal:nth-child(odd) {
-    animation-duration: 5s;
-  }
-  
-  .petal:nth-child(even) {
-    animation-duration: 7s;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  /* BirthdayCard.css */
-
-
-
-
-
-
-
-
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0ebe4f;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 60%;
-    margin: auto;
-    flex-wrap: wrap;
-    position: relative; /* Add this for flower positioning */
-  }
-  
-  .attributes {
-    display: flex;
-    flex-direction: column;
-    margin: 0 20px;
-  }
-  
-  .left {
-    text-align: right;
-  }
-  
-  .right {
-    text-align: left;
-  }
-  
-  .attribute {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .letter {
-    font-weight: bold;
-  }
-  
-  .card {
-    text-align: center;
-    flex: 1;
-  }
-  
-  .card-img {
-    width: 30%;
-    height: 40%;
-    border-radius: 25px;
-    box-shadow: rgb(6, 8, 10) 0px 20px 30px -10px;
-  }
-  
-  .card-content {
-    text-align: center;
-  }
-  
-  .card-title {
-    font-size: 2em;
-    margin: 20px 0 10px;
-  }
-  
-  .card-text {
-    font-size: 1.2em;
-  }
-  
-  /* Falling flowers */
-  .flower {
     position: absolute;
     top: -100px;
     width: 20px;
     height: 20px;
-    background: url('') no-repeat center center;
+  
     background-size: contain;
+    background-repeat: no-repeat;
     animation: fall linear infinite;
   }
   
@@ -202,49 +90,17 @@
     }
   }
   
-  /* Randomize animation duration and delay */
-  .flower:nth-child(1) { animation-duration: 5s; animation-delay: 0s; left: 50%; }
-  .flower:nth-child(2) { animation-duration: 4s; animation-delay: 2s; left: 50%; }
-  .flower:nth-child(3) { animation-duration: 6s; animation-delay: 1s; left: 130%; }
-  /* Add more nth-child rules for each flower */
-  
+  .petal:nth-child(1) { animation-duration: 5s; animation-delay: 0s; left: 10%; }
+  .petal:nth-child(2) { animation-duration: 4s; animation-delay: 2s; left: 20%; }
+  .petal:nth-child(3) { animation-duration: 6s; animation-delay: 1s; left: 30%; }
+  .petal:nth-child(4) { animation-duration: 7s; animation-delay: 3s; left: 40%; }
+  .petal:nth-child(5) { animation-duration: 5s; animation-delay: 4s; left: 50%; }
+  .petal:nth-child(6) { animation-duration: 4s; animation-delay: 5s; left: 60%; }
+  .petal:nth-child(7) { animation-duration: 6s; animation-delay: 1s; left: 70%; }
+  .petal:nth-child(8) { animation-duration: 7s; animation-delay: 2s; left: 80%; }
+  .petal:nth-child(9) { animation-duration: 5s; animation-delay: 3s; left: 90%; }
+  .petal:nth-child(10) { animation-duration: 4s; animation-delay: 4s; left: 100%; }
 
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+   
