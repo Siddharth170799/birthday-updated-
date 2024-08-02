@@ -5,6 +5,7 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import BackgroundMusic from './components/Audio';
+import VideoComponent from './components/Video';
 
 function App() {
   const friendName  = 'Raaga Sreeja';
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element = {  <BirthdayCard name={friendName} imageUrl={imageUrl} />}/>
           <Route path="/about" element={<About/>}/>
+          <Route path='/video' element={<VideoComponent/>}/>
           </Routes></BrowserRouter>
    
       

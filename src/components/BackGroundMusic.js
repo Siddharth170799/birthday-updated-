@@ -54,13 +54,13 @@ const BackgroundMusic1 = () => {
     }
   };
 
-  useEffect(() => {
-    playAudio();
+  // useEffect(() => {
+  //   playAudio();
 
-    return () => {
-      stopAudio(); 
-    };
-  }, []);
+  //   return () => {
+  //     stopAudio(); 
+  //   };
+  // }, []);
 
   return (
     <div className="background-music">

@@ -1,0 +1,53 @@
+.about {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .yellow-bg {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .default-bg {
+    background-color: white;
+    color: black;
+  }
+  
+  .green-bg {
+    background-color: green;
+    color: white;
+  }
+  
+  .video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .about {
+      padding: 10px;
+    }
+  
+    .video-container {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about {
+      padding: 5px;
+    }
+  
+    .yellow-bg, .default-bg, .green-bg {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .video-container {
+      margin-top: 5px;
+    }
+  }
+  

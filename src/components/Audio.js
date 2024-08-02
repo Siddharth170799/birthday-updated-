@@ -132,6 +132,7 @@
 // export default BackgroundMusic;
 
 import React, { useEffect, useState } from 'react';
+import VideoComponent from './Video';
 
 function BackgroundMusic() {
   const [button, setButton] = useState(true);
@@ -154,6 +155,7 @@ function BackgroundMusic() {
   }, []);
 
   return (
+    <>
     <div className="container">
       {/* <span style={{color:"red"}}>Click on the button for Music</span>
       <button style={{height:"40px"}} className="btn" onClick={initAudio}>
@@ -164,6 +166,8 @@ function BackgroundMusic() {
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
       </audio>
     </div>
+
+    </>
   );
 }
 
