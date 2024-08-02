@@ -1,57 +1,21 @@
-/* .about {
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;
+/* VideoComponent.css
+
+.video-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .responsive-video {
+    width: 100%;
+    height: auto;
+    max-width: 600px; 
+    display: block;
     margin: 0 auto;
   }
-  
-  .yellow-bg {
-    background-color: yellow;
-    color: black;
-  }
-  
-  .default-bg {
-    background-color: white;
-    color: black;
-  }
-  
-  .green-bg {
-    background-color: green;
-    color: white;
-  }
-  
-  .video-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .about {
-      padding: 10px;
-    }
-  
-    .video-container {
-      margin-top: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .about {
-      padding: 5px;
-    }
-  
-    .yellow-bg, .default-bg, .green-bg {
-      font-size: 14px;
-      padding: 10px;
-    }
-  
-    .video-container {
-      margin-top: 5px;
-    }
-  }
    */
-
 
    .about {
     text-align: center;
@@ -81,6 +45,12 @@
     margin-top: 20px;
   }
   
+  /* Larger devices */
+  .video-container video {
+    width: 200%; /* Increase width by 100% */
+    height: 200%; /* Increase height by 100% */
+  }
+  
   /* Tablet view */
   @media (max-width: 768px) {
     .about {
@@ -89,6 +59,11 @@
   
     .video-container {
       margin-top: 10px;
+    }
+  
+    .video-container video {
+      width: 100%; /* Reset to 100% for tablets */
+      height: auto; /* Maintain aspect ratio */
     }
   }
   
@@ -108,8 +83,9 @@
     }
   
     .video-container video {
-      width: 100%; /* Adjust this value as needed */
-      max-width: 300px; /* Maximum width for the video */
+      width: 100%; /* Reset to 100% for mobiles */
+      max-width: 300px; /* Maximum width for the video on mobile */
+      height: auto; /* Maintain aspect ratio */
     }
   }
   
