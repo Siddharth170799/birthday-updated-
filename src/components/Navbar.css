@@ -24,9 +24,7 @@
   .navbar-item a:hover {
     text-decoration: underline;
   }
-   */
-
-   .navbar {
+    .navbar {
     width: 100%;
     background-color: #333;
     overflow: hidden;
@@ -56,4 +54,82 @@
     background-color: #ddd;
     color: black;
   }
-  
+   
+ 
+
+ */
+
+
+
+
+
+
+
+/* Base styles for the navbar */
+.navbar {
+  width: 100%;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+
+
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+/* Styling for individual list items */
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+
+/* Base styles for the anchor tags */
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for anchor tags */
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+
+.navbar a:active,
+.navbar a:focus {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #333;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: row; 
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+}

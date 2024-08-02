@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import './BirthdayCard.css';
 
 import image from "../components/images/petals.jpeg"
+import BackgroundMusic1 from './BackGroundMusic';
 
 const BirthdayCard = ({ name, imageUrl }) => {
   const attributesLeft = {
@@ -43,7 +44,14 @@ const BirthdayCard = ({ name, imageUrl }) => {
   }, []);
 
   return (
+    <>
+    <div>       <BackgroundMusic1/></div>
     <div className="card-container">
+        {/* <span style={{color:"red"}}>Click on the button for Music</span>
+      <button style={{height:"40px"}} className="btn" onClick={initAudio}>
+        {button ? 'Play Mp3 Audio' : 'Stop Mp3 Audio'}
+      </button> */}
+
       <div className="attributes left">
         {Object.entries(attributesLeft).map(([letter, attribute], index) => (
           <div key={`left-${index}`} className="attribute">
@@ -114,11 +122,11 @@ const BirthdayCard = ({ name, imageUrl }) => {
            
 
        </div>
-       {/* <div className='petal' style={{marginRight:"70%"}}>
+        <div className='petal' style={{marginRight:"70%"}}>
            <img style={{width:"30px", height:"40px",padding:"10%",}} src={image} alt='petals'/>  
            
 
-       </div> */}
+       </div> 
         <div className="card-content">
           <img src={imageUrl} alt="Birthday" className="card-img" />
           <h3 className="card-title">Happy Birthday, {name}!</h3>
@@ -137,7 +145,7 @@ const BirthdayCard = ({ name, imageUrl }) => {
         ))}
       </div>
     </div>
-    
+    </>
   );
 };
 

@@ -98,37 +98,76 @@
 
 // // export default BackgroundMusic;
 
+// import React, { useEffect, useState } from 'react';
+
+
+// function BackgroundMusic() {
+//     const [button,setButton]=useState(true)
+
+//   let initAudio = () => {
+//     if(button == false){
+//         const targetAudio = document.getElementsByClassName("audioBtn")[0];
+//         targetAudio.play();
+//     }
+
+//   };
+//   useEffect(()=>{
+// setButton(false)
+//   },[button])
+
+
+//   return (
+//     <div className="container">
+//      <span style={{color:"red"}}>Click on the button for Music</span> <button style={{height:"40px"}} className="btn" onClick={initAudio}>
+//         Play Mp3 Audio
+//       </button> 
+
+//       <audio className="audioBtn">
+//   <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+// </audio>
+//     </div>
+//   );
+// }
+
+// export default BackgroundMusic;
+
 import React, { useEffect, useState } from 'react';
 
-
 function BackgroundMusic() {
-    const [button,setButton]=useState(true)
+  const [button, setButton] = useState(true);
 
   let initAudio = () => {
-    if(button == false){
-        const targetAudio = document.getElementsByClassName("audioBtn")[0];
-        targetAudio.play();
+    const targetAudio = document.getElementsByClassName("audioBtn")[0];
+    if (button) {
+      targetAudio.play();
+      setButton(false);
+    } else {
+      targetAudio.pause();
+      setButton(true);
     }
-
   };
-  useEffect(()=>{
-setButton(false)
-  },[button])
 
+  useEffect(() => {
+    const targetAudio = document.getElementsByClassName("audioBtn")[0];
+    targetAudio.pause();
+    setButton(true);
+  }, []);
 
   return (
     <div className="container">
-     <span style={{color:"red"}}>Click on the button for Music</span> <button style={{height:"40px"}} className="btn" onClick={initAudio}>
-        Play Mp3 Audio
-      </button> 
+      {/* <span style={{color:"red"}}>Click on the button for Music</span>
+      <button style={{height:"40px"}} className="btn" onClick={initAudio}>
+        {button ? 'Play Mp3 Audio' : 'Stop Mp3 Audio'}
+      </button> */}
 
       <audio className="audioBtn">
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
-</audio>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+      </audio>
     </div>
   );
 }
 
 export default BackgroundMusic;
+
 
 
